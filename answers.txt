@@ -1,0 +1,16 @@
+- What is a gitignore file and what should it include for a Java project? 
+.gitignore contains the list of files that should not be pushed to the remote repository. These files are not irrelevant to the code but can contain sensitive data, compiled reproducible code, local configurations, assets, etc. which can compromise personal info or unnecessarily increase the size of your repo.
+
+Java projects should mainly include two types of files specifically:
+Compiled code files such as .class files made from existing code for local compilation
+Packaged files such as .jar files made for local execution
+Apart from these, it should include all generated files if you are using other management tools such as Maven. For example, /target folder usually contains all the generated files for a java project.
+
+- What does fast-forward in Git mean?
+When merging two branches, if the current HEAD is an ancestor of the commit being merged, then the HEAD pointer will just move down the same path to point to that commit.
+
+- Why should you have different branches?
+Different branches help with task distribution and prevent unnecessary conflicts when many members are working on the same repo.
+
+- In a project how many remote Git repositories do you usually have?
+We can have as many as needed depending on our architecture. To have separation of concerns different microservices can have their own repos. This helps in easier deployment and access management.
